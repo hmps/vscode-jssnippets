@@ -1,0 +1,39 @@
+{
+	"name": "JSSnippets",
+	"description": "Code snippets for JavaScript",
+	"version": "1.0.0",
+	"displayName": "JavaScript code snippets",
+	"publisher": "Hmps",
+	"icon": "images/javascript.png",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/hmps/vscode-jssnippets"
+	},
+	"engines": {
+		"vscode": "0.10.x"
+	},
+	"categories": [
+		"Snippets"
+	],
+	"contributes": {
+		"snippets": [
+			{
+				"language": "javascript",
+				"path": "./snippets/snippets.json"
+			},
+			{
+				"language": "typescript",
+				"path": "./snippets/snippets.json"
+			},
+			{
+				"language": "javascriptreact",
+				"path": "./snippets/snippets.json"
+			},
+			{
+				"language": "typescriptreact",
+				"path": "./snippets/snippets.json"
+			}
+		]
+	}
+}

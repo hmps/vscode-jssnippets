@@ -1,0 +1,248 @@
+{
+  "import": {
+    "prefix": "imp",
+    "body": "import $1 from '${2:module}';$0",
+    "description": "Imports entire module statement in ES6 syntax"
+  },
+  "importDestructing": {
+    "prefix": "imd",
+    "body": "import { $1 } from '${2:module}';$0",
+    "description": "Imports only a portion of the module in ES6 syntax"
+  },
+  "importEverything": {
+    "prefix": "ime",
+    "body": "import * as ${1:alias} from '${2:module}';$0",
+    "description": "Imports everything as alias from the module in ES6 syntax"
+  },
+  "importAs": {
+    "prefix": "ima",
+    "body": "import {${1:originalName} as ${2:alias} } from '${3:module}';$0",
+    "description": "Imports a specific portion of the module by assigning a local alias in ES6 syntax"
+  },
+  "exportNamedFunction": {
+    "prefix": "enf",
+    "body": "export const ${1:functionName} = (${2:params}) =>  {\n\t$0\n};\n",
+    "description": "Export named function in ES6 syntax"
+  },
+  "exportDefaultFunction": {
+    "prefix": "edf",
+    "body": "export default (${1:params}) =>  {\n\t$0\n};\n",
+    "description": "Export default function in ES6 syntax"
+  },
+  "exportClass": {
+    "prefix": "ecl",
+    "body": "export default class ${1:className} {\n\t$0\n};\n",
+    "description": "Export default class in ES6 syntax"
+  },
+  "exportClassExtends": {
+    "prefix": "ece",
+    "body": "export default class ${1:className} extends ${2:baseclassName} {\n\t$0\n};\n",
+    "description": "Export default class which extends a base one in ES6 syntax"
+  },
+  "constructor": {
+    "prefix": "con",
+    "body": "constructor(${1:params}) {\n\t${0}\n}",
+    "description": "Add default constructor in a class in ES6 syntax"
+  },
+  "method": {
+    "prefix": "met",
+    "body": "${1:methodName}(${2:params}) {\n\t${0}\n}",
+    "description": "Creates a method inside a class in ES6 syntax"
+  },
+  "propertyGet": {
+    "prefix": "pge",
+    "body": "get ${1:propertyName}() {\n\treturn this.${0};\n}",
+    "description": "Creates a getter property inside a class in ES6 syntax"
+  },
+  "propertySet": {
+    "prefix": "pse",
+    "body": "set ${1:propertyName}(${2:value}) {\n\t${0};\n}",
+    "description": "Creates a setter property inside a class in ES6 syntax"
+  },
+  "forEach": {
+    "prefix": "fre",
+    "body": "${1:array}.forEach(${2:currentItem} => {\n\t${0}\n});",
+    "description": "Creates a forEach statement in ES6 syntax"
+  },
+  "forOf": {
+    "prefix": "fof",
+    "body": [
+      "for (const ${1:key} of ${2:object}) {",
+      "\tif(${2:object}.hasOwnProperty($1:key)) {",
+      "\t\t${0}",
+      "\t}",
+      "}"
+    ],
+    "description": "Iterating over property names of iterable objects"
+  },
+  "forIn": {
+    "prefix": "fin",
+    "body": [
+      "for (const ${1:key} in ${2:object}) {",
+      "\tif(${2:object}.hasOwnProperty($1:key)) {",
+      "\t\t${0}",
+      "\t}",
+      "}"
+    ],
+    "description": "Iterating over property values of iterable objects"
+  },
+  "arrowFunction": {
+    "prefix": "afn",
+    "body": "($1) => {\n\t$2\n}",
+    "description": "Arrow function with a body"
+  },
+  "arrowFunctionReturn": {
+    "prefix": "afnr",
+    "body": "($1) => $2;",
+    "description": "Arrow function with immediate return"
+  },
+  "function": {
+    "prefix": "fn",
+    "body": "function ${1:name}($2) {\n\t$3\n}",
+    "description": "Function with body"
+  },
+  "destructingObject": {
+    "prefix": "dob",
+    "body": "const {${1:propertyName}} = ${2:objectToDestruct};",
+    "description": "Creates and assigns a local variable using object destructing"
+  },
+  "destructingArray": {
+    "prefix": "dar",
+    "body": "const [${1:propertyName}] = ${2:arrayToDestruct};",
+    "description": "Creates and assigns a local variable using array destructing"
+  },
+  "setInterval": {
+    "prefix": "sti",
+    "body": "setInterval(() => {\n\t${2}\n}, ${0:intervalInms});",
+    "description": "Executes the given function at specified intervals in ES6 syntax"
+  },
+  "setTimeOut": {
+    "prefix": "sto",
+    "body": "setTimeout(() => {\n\t${2}\n}, ${1:delayInms});",
+    "description": "Executes the given function after the specified delay in ES6 syntax"
+  },
+  "If block statement": {
+    "prefix": "if",
+    "body": "if (${1:condition}) {\n\t$2\n}",
+    "description": "If block statement"
+  },
+  "promise": {
+    "prefix": "prom",
+    "body": "return new Promise((resolve, reject) => {\n\t${1}\n});",
+    "description": "Creates and returns a new Promise in the standard ES6 syntax"
+  },
+  "console.assert": {
+    "prefix": "ca",
+    "body": "console.assert(${1:expression}, ${2:object});",
+    "description": "If the specified expression is false, the message is written to the console along with a stack trace"
+  },
+  "console.clear": {
+    "prefix": "ccl",
+    "body": "console.clear();",
+    "description": "Clears the console"
+  },
+  "console.count": {
+    "prefix": "cco",
+    "body": "console.count(${1:label});",
+    "description": "Writes the the number of times that count() has been invoked at the same line and with the same label"
+  },
+  "console.dir": {
+    "prefix": "cd",
+    "body": [
+      "console.dir($1);"
+    ],
+    "description": "Code snippet for \"console.dir\""
+  },
+  "console.error": {
+    "prefix": "ce",
+    "body": [
+      "console.error($1);"
+    ],
+    "description": "Code snippet for \"console.error\""
+  },
+  "console.group": {
+    "prefix": "cgr",
+    "body": "console.group(\"${1:label}\");",
+    "description": "Groups and indents all following output by an additional level, until console.groupEnd() is called."
+  },
+  "console.groupEnd": {
+    "prefix": "cge",
+    "body": "console.groupEnd();",
+    "description": "Closes out the corresponding console.group()."
+  },
+  "console.info": {
+    "prefix": "ci",
+    "body": [
+      "console.info($1);"
+    ],
+    "description": "Code snippet for \"console.info\""
+  },
+  "console.log": {
+    "prefix": "cl",
+    "body": [
+      "console.log($1);"
+    ],
+    "description": "Code snippet for \"console.log\""
+  },
+  "console.trace": {
+    "prefix": "ctr",
+    "body": "console.trace(${1:object});",
+    "description": "Prints a stack trace from the point where the method was called"
+  },
+  "console.warn": {
+    "prefix": "cw",
+    "body": [
+      "console.warn($1);"
+    ],
+    "description": "Code snippet for \"console.warn\""
+  },
+  "debugger": {
+    "prefix": "de",
+    "body": [
+      "debugger;$1"
+    ],
+    "description": "Code snippet for \"debugger\""
+  },
+  "classList.add": {
+    "prefix": "cla",
+    "body": [
+      "${1:document}.classList.add('${2:class}');"
+    ],
+    "description": "Code snippet for \"classList.add\""
+  },
+  "classList.toggle": {
+    "prefix": "clt",
+    "body": [
+      "${1:document}.classList.toggle('${2:class}');"
+    ],
+    "description": "Code snippet for \"classList.toggle\""
+  },
+  "classList.remove": {
+    "prefix": "clr",
+    "body": [
+      "${1:document}.classList.remove('${2:class}');"
+    ],
+    "description": "Code snippet for \"classList.remove\""
+  },
+  "classList.contains": {
+    "prefix": "clc",
+    "body": [
+      "${1:document}.classList.contains('${2:class}');"
+    ],
+    "description": "Code snippet for \"classList.contains\""
+  },
+  "querySelector": {
+    "prefix": "qs",
+    "body": [
+      "${1:document}.querySelector('${2:selector}');"
+    ],
+    "description": "Code snippet for \"querySelector\""
+  },
+  "querySelectorAll": {
+    "prefix": "qsa",
+    "body": [
+      "${1:document}.querySelectorAll('${2:selector}');"
+    ],
+    "description": "Code snippet for \"querySelectorAll\""
+  }
+}
