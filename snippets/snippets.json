@@ -132,65 +132,65 @@
     "description": "Creates and returns a new Promise in the standard ES6 syntax"
   },
   "console.assert": {
-    "prefix": "ca",
+    "prefix": "coa",
     "body": "console.assert(${1:expression}, ${2:object});",
     "description": "If the specified expression is false, the message is written to the console along with a stack trace"
   },
   "console.clear": {
-    "prefix": "ccl",
+    "prefix": "cocl",
     "body": "console.clear();",
     "description": "Clears the console"
   },
   "console.count": {
-    "prefix": "cco",
+    "prefix": "coco",
     "body": "console.count(${1:label});",
     "description": "Writes the the number of times that count() has been invoked at the same line and with the same label"
   },
   "console.dir": {
-    "prefix": "cd",
+    "prefix": "cod",
     "body": [
       "console.dir($1);"
     ],
     "description": "Code snippet for \"console.dir\""
   },
   "console.error": {
-    "prefix": "ce",
+    "prefix": "coe",
     "body": [
       "console.error($1);"
     ],
     "description": "Code snippet for \"console.error\""
   },
   "console.group": {
-    "prefix": "cgr",
+    "prefix": "cogr",
     "body": "console.group(\"${1:label}\");",
     "description": "Groups and indents all following output by an additional level, until console.groupEnd() is called."
   },
   "console.groupEnd": {
-    "prefix": "cge",
+    "prefix": "coge",
     "body": "console.groupEnd();",
     "description": "Closes out the corresponding console.group()."
   },
   "console.info": {
-    "prefix": "ci",
+    "prefix": "coi",
     "body": [
       "console.info($1);"
     ],
     "description": "Code snippet for \"console.info\""
   },
   "console.log": {
-    "prefix": "cl",
+    "prefix": "col",
     "body": [
       "console.log($1);"
     ],
     "description": "Code snippet for \"console.log\""
   },
   "console.trace": {
-    "prefix": "ctr",
+    "prefix": "cot",
     "body": "console.trace(${1:object});",
     "description": "Prints a stack trace from the point where the method was called"
   },
   "console.warn": {
-    "prefix": "cw",
+    "prefix": "cow",
     "body": [
       "console.warn($1);"
     ],
